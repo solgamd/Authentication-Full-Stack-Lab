@@ -12,4 +12,5 @@ export default {
     auth: {
         secret: process.env.SECRET
     }
+    // add apiKeys
 }

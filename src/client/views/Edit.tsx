@@ -37,12 +37,12 @@ const Edit: React.SFC<EditProps> = props => {
 
     const handleEdit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        try { //switched to json utils
-            
+        try {
+
             await json(`/api/blogs/${props.match.params.id}`, 'PUT', { title, content });
-          
+
             await json(`/api/blogtags/${props.match.params.id}`, 'PUT', { tagid: selectedTag });
-          
+
         } catch (error) {
             console.log(error);
         }

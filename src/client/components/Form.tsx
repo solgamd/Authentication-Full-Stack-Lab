@@ -1,8 +1,6 @@
 import * as React from 'react';
 import '../scss/app.scss';
 import { injectStripe, ReactStripeElements, CardElement } from 'react-stripe-elements';
-// import { withRouter } from 'react-router';
-
 
 export interface FormProps extends ReactStripeElements.InjectedStripeProps {
     goHome: any
@@ -78,4 +76,3 @@ class Form extends React.Component<FormProps, FormState> {
 
 export default injectStripe(Form);
 
-// export default withRouter(injectStripe(Form));

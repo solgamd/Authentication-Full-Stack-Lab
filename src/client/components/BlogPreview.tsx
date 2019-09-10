@@ -7,7 +7,7 @@ export interface BlogPreviewProps {
     blog: IBlog
 }
 
-const BlogPreview: React.SFC<BlogPreviewProps> = ({ blog }) => { //destructuring blog to pass props more easily
+const BlogPreview: React.SFC<BlogPreviewProps> = ({ blog }) => { 
     return (
         <div>
             <div className="card m-3 mt-8 shadow">

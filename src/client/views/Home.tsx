@@ -13,9 +13,7 @@ const Home: React.SFC<HomeProps> = () => {
     useEffect(() => {
         (async () => {
             try {
-                let blogs = await json('/api/blogs'); //Option: put URL in a separate file in case of changes
-                // let r = await fetch('/api/blogs');
-                // let blogs = await r.json();
+                let blogs = await json('/api/blogs'); 
                 setBlogs(blogs);
             } catch (error) {
                 console.log(error);

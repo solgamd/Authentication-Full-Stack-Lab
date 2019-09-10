@@ -3,7 +3,7 @@ $theme-colors: (
     'secondary': #590004,
     'success': #59C3C3,
     'warning': #FCBA04,
-    'alert': white
+    'alert': #FFFFFF
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
@@ -11,4 +11,8 @@ $theme-colors: (
 
 .nav-link {
     justify-content: end
+}
+
+.card {
+    max-width: 540px;
 }

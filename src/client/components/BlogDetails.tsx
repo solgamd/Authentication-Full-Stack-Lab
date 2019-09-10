@@ -15,7 +15,7 @@ const BlogDetails: React.SFC<BlogDetailsProps> = ({ blog, tags }) => {
                 <div className="card-body">
                     <h4 className="card-title">{blog.title}</h4>
                     {tags.map(tag => (
-                        <span key={`tag-${tag.id}`} className="badge badge-success badge-pill m-1">{tag.name}</span>
+                        <span key={`tag-${tag.id}`} className="badge badge-warning badge-pill m-1">{tag.name}</span>
                     ))}
                     <p className="card-text mt-3">{blog.content}</p>
                     <p className="text-muted">{moment(blog._created).format('MM DD YYYY')}</p>

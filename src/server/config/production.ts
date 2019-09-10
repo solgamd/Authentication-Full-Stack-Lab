@@ -11,6 +11,11 @@ export default {
     
     auth: {
         secret: process.env.SECRET
+    },
+    
+    apiKeys: {
+        stripe: process.env.stripe,
+        mailgunApi: process.env.mailgunApi,
+        mailgunDomain: process.env.mailgunDomain
     }
-    // add apiKeys
 }

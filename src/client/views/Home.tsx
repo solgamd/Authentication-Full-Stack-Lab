@@ -26,10 +26,10 @@ const Home: React.SFC<HomeProps> = () => {
     return (
         <>
             <div>
-                <h2 className="row m-4 justify-content-center">My Blog Feed</h2>
+                <h2 className="row m-4 justify-content-center text-secondary">Blog Feed</h2>
             </div>
-            <main className="col-10 offset-2">
-            <section className="row mt-3">
+            <main className="col">
+            <section className="row mt-3 justify-content-center">
                 {blogs.map(blog => (
                     <BlogPreview key={`blog-${blog.id}`} blog={blog} />
                 ))}

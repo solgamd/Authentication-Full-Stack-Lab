@@ -36,7 +36,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
     render() {
         return (
             <main className="container col-md-8">
-                <h2 className="row mt-4 justify-content-center">Get In Touch With Me</h2>
+                <h2 className="row mt-4 justify-content-center text-secondary">Get In Touch With Me</h2>
                 <h6 className="row justify-content-center mt-5">Send me your comments or questions about my blog.</h6>
                 <form
                     className="form-group mt-5 border rounded p-3 shadow"

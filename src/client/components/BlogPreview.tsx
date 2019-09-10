@@ -17,7 +17,7 @@ const BlogPreview: React.SFC<BlogPreviewProps> = ({ blog }) => { //destructuring
                     <Link to={`/${blog.id}/details`} className="btn btn-primary btn-block m-1 shadow-sm">Read More</Link>
                 </div>
                 <div className="card-footer">
-                    <p className="text-muted">Posted on {moment(blog._created).format('MM DD YYYY')}</p>
+                    <p className="text-muted text-secondary">Posted on {moment(blog._created).format('MM DD YYYY')}</p>
                 </div>
             </div>
         </div>

@@ -1,12 +1,13 @@
 $theme-colors: (
-    'primary': #275DAD, 
-    'secondary': #FCF7F8,
-    'success': #F961A3,
-    'warning': #7971CE,
-    'alert': #C9CDD6
+    'primary': #5A7D7C, 
+    'secondary': #590004,
+    'success': #59C3C3,
+    'warning': #FCBA04,
+    'alert': white
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
 
 .nav-link {
     justify-content: end

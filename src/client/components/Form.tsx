@@ -43,7 +43,7 @@ class Form extends React.Component<FormProps, FormState> {
     render() {
         return (
             <>
-                <h2 className="row justify-content-center mt-3">Donate to This Blog</h2>
+                <h2 className="row justify-content-center mt-3 text-secondary">Donate to This Blog</h2>
                 <h6 className="row justify-content-center mt-5">You know you wanna give me all the monies!</h6>
 
                 <main className="container justify-content-center mt-3">

@@ -69,7 +69,7 @@ class Login extends React.Component<LoginProps, LoginState> {
         return (
             <section className="row justify-password-center justify-content-center">
                 <article className="col-8">
-                    <h2 className="row mt-4 justify-password-center justify-content-center">Login</h2>
+                    <h2 className="row mt-4 justify-password-center justify-content-center text-secondary">Login</h2>
                     <form className="form-group p-3 shadow border rounded">
                         <label>Email</label>
                         <input

@@ -10,6 +10,7 @@ import Login from '../views/Login';
 import Admin from '../views/Admin';
 import Donate from '../views/Donate';
 import Contact from '../views/Contact';
+// import Background from './Background';
 
 
 export interface IAppProps { }

@@ -32,7 +32,7 @@ const Details: React.SFC<DetailsProps> = props => {
     }, [props.match.params.id]);
 
     return (
-        <section className="row mt-5">
+        <section className="row mt-5 justify-content-center">
             <BlogDetails blog={blog} tags={tags} />
         </section>
     );

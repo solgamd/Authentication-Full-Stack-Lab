@@ -13,7 +13,7 @@ const BlogDetails: React.SFC<BlogDetailsProps> = ({ blog, tags }) => {
             <div className="card mb-3 shadow">
                 <div className="row no-gutters" style={{maxWidth: '540px'}}>
                     <div className="col-md-4">
-                        <img src="/images/airport-woman.jpg" className="card-img" alt="blog-image" />
+                        <img src="/images/airport-woman-det.jpg" className="card-img" alt="blog-image" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

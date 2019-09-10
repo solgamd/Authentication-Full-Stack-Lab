@@ -8,7 +8,16 @@ $theme-colors: (
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-
+body {
+    background-image: url("/images/topography.jpg");
+    // background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: lightgrey;
+    background-blend-mode: overlay;
+}
 .nav-link {
     justify-content: end
 }

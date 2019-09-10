@@ -93,7 +93,7 @@ const NewPost: React.SFC<NewPostProps> = props => {
                         value={content}
                         onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
                         className="form-control"
-                        rows={10}
+                        rows={8}
                     />
 
                     <button

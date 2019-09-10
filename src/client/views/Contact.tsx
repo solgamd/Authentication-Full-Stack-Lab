@@ -37,9 +37,9 @@ class Contact extends React.Component<ContactProps, ContactState> {
         return (
             <main className="container col-md-8">
                 <h2 className="row mt-4 justify-content-center text-secondary">Get In Touch With Me</h2>
-                <h6 className="row justify-content-center mt-5">Send me your comments or questions about my blog.</h6>
+                <h6 className="row justify-content-center mt-4">Send me your comments or questions about my blog.</h6>
                 <form
-                    className="form-group mt-5 border rounded p-3 shadow"
+                    className="form-group border rounded p-3 shadow mt-5"
                     onSubmit={this.onSubmit}>
                     <label>Email</label>
                     <input
@@ -57,7 +57,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
                     <label>Message</label>
                     <textarea
                         value={this.state.message}
-                        rows={10}
+                        rows={8}
                         className="form-control"
                         onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => this.setState({ message: e.target.value })} />
                     <button className="btn btn-primary mt-3 shadow">Send Email</button>

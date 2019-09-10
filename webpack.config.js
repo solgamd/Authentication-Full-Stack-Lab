@@ -63,16 +63,4 @@ const clientConfig = {
     }
 };
 
-const rawConfig = {
-        module: {
-          rules: [
-            {
-              test: /\.txt$/i,
-              use: 'raw-loader',
-            },
-          ],
-        },
-      };
-
-
-module.exports = [serverConfig, clientConfig, rawConfig];
+module.exports = [serverConfig, clientConfig];

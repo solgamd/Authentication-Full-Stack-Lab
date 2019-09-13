@@ -39,7 +39,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
                 <h2 className="row mt-4 justify-content-center text-secondary">Get In Touch With Me</h2>
                 <h6 className="row justify-content-center mt-4">Send me your comments or questions about my blog.</h6>
                 <form
-                    className="form-group border rounded p-3 shadow mt-5"
+                    className="form-group border rounded p-3 shadow mt-5 bg-white"
                     onSubmit={this.onSubmit}>
                     <label>Email</label>
                     <input

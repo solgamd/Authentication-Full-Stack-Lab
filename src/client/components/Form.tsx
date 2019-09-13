@@ -44,9 +44,9 @@ class Form extends React.Component<FormProps, FormState> {
                 <h2 className="row justify-content-center mt-4 text-secondary">Donate to This Blog</h2>
                 <h6 className="row justify-content-center mt-4">You know you wanna give me all the monies!</h6>
                 <main className="container justify-content-center mt-5">
-                    <section className="col-8 offset-2 border rounded shadow">
+                    <section className="col-8 offset-2 border rounded shadow bg-white">
                         <form
-                            className="form-group mt-3"
+                            className="form-group mt-3 bg-white"
                             onSubmit={this.handleSubmit}>
                             <label>Name</label>
                             <input

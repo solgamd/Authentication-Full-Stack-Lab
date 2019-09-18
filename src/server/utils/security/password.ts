@@ -9,3 +9,4 @@ export const HashPassword = (password: string) => {
 export const ComparePassword = (password: string, hash: string) => {
     return bcrypt.compareSync(password, hash);
 }
+

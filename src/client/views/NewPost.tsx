@@ -47,11 +47,6 @@ const NewPost: React.SFC<NewPostProps> = props => {
         try {
             saving = true;
             let posted = await json('/api/blogs', 'POST', blog);
-            // await fetch('/api/blogs', {
-            //     method: 'POST',
-            //     headers: { "Content-type": "application/json" },
-            //     body: JSON.stringify({ title, content, selectedTag })
-            // });
             if (posted) {
                 props.history.push(`/${posted}/details`);
             } else {
@@ -68,7 +63,7 @@ const NewPost: React.SFC<NewPostProps> = props => {
         <section className="row justify-content-center">
             <article className="col-8">
                 <h2 className="row mt-4 justify-content-center text-secondary">New Post</h2>
-                <form className="form-group p-3 mt-3 shadow border rounded bg-white">
+                <form className="form-group p-3 my-5 shadow border rounded bg-white">
                     <label>Blog Title</label>
                     <input
                         value={title}

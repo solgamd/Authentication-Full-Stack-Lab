@@ -42,7 +42,7 @@ const Admin: React.FC<AdminProps> = (props) => {
         <section className="row justify-content-center my-2">
             <article className="col-md-8">
             <h2 className="row m-3 justify-content-center text-secondary" >Admin Options</h2>
-                <ul className="list-group mt-3">
+                <ul className="list-group my-5">
                     {blogs.map(blog => (
                         <li key={`blog-${blog.id}`} className="list-group-item d-flex align-items-center justify-content-between m-1 rounded shadow">
                             <span>{blog.title}</span>
@@ -54,7 +54,7 @@ const Admin: React.FC<AdminProps> = (props) => {
                                 <button
                                     onClick={() => deleteBlog(blog.id)}
                                     className="btn btn-secondary btn-small mx-1"
-                                >X</button>
+                                >Delete</button>
                             </div>
                         </li>
                     ))}

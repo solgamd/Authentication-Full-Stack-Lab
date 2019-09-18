@@ -46,7 +46,7 @@ class Form extends React.Component<FormProps, FormState> {
                 <main className="container justify-content-center mt-5">
                     <section className="col-8 offset-2 border rounded shadow bg-white">
                         <form
-                            className="form-group mt-3 bg-white"
+                            className="form-group my-5 bg-white"
                             onSubmit={this.handleSubmit}>
                             <label>Name</label>
                             <input

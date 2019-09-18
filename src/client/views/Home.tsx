@@ -13,7 +13,7 @@ const Home: React.SFC<HomeProps> = () => {
     useEffect(() => {
         (async () => {
             try {
-                let blogs = await json('/api/blogs'); 
+                let blogs = await json('/api/blogs');
                 setBlogs(blogs);
             } catch (error) {
                 console.log(error);
@@ -27,11 +27,11 @@ const Home: React.SFC<HomeProps> = () => {
                 <h2 className="row m-4 justify-content-center text-secondary">Blog Feed</h2>
             </div>
             <main className="col">
-            <section className="row mt-3 justify-content-center">
-                {blogs.map(blog => (
-                    <BlogPreview key={`blog-${blog.id}`} blog={blog} />
-                ))}
-            </section>
+                <section className="row my-5 justify-content-center">
+                    {blogs.map(blog => (
+                        <BlogPreview key={`blog-${blog.id}`} blog={blog} />
+                    ))}
+                </section>
             </main>
         </>
     )

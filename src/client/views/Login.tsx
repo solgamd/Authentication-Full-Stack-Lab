@@ -40,6 +40,7 @@ class Login extends React.Component<LoginProps, LoginState> {
             email: this.state.email,
             password: this.state.password
         }
+        console.log(login);
         try {
             this.loggingIn = true;
             let result = await json('/auth/login', 'POST', login);
@@ -70,7 +71,7 @@ class Login extends React.Component<LoginProps, LoginState> {
             <section className="row justify-password-center justify-content-center">
                 <article className="col-8">
                     <h2 className="row mt-4 justify-password-center justify-content-center text-secondary">Login</h2>
-                    <form className="form-group p-3 shadow border rounded">
+                    <form className="form-group p-3 shadow border rounded bg-white">
                         <label>Email</label>
                         <input
                             value={this.state.email}

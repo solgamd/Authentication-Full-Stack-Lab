@@ -4,7 +4,7 @@ import * as path from 'path';
 import * as passport from 'passport';
 import './middleware/localstrategy';
 import './middleware/bearerstrategy';
-// import { HashPassword } from './utils/security/password';
+import { HashPassword } from './utils/security/password';
 import routes from './routes';
 
 const app = express();
@@ -24,4 +24,4 @@ app.listen(port, () => console.log(`Server listening on port: ${port}`));
 
 
 
-// console.log(HashPassword('otterdude7'));  //Used to generate hashed/salted passwords for tokens in MySQL database
+// console.log(HashPassword('guest'));  //Used to generate hashed/salted passwords for tokens in MySQL database

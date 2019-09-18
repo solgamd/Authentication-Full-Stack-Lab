@@ -9,7 +9,6 @@ export interface DonateProps extends RouteComponentProps { }
 export interface DonateState { }
 
 class Donate extends React.Component<DonateProps, DonateState> {
-
     render() {
         return (
             <>
@@ -21,6 +20,7 @@ class Donate extends React.Component<DonateProps, DonateState> {
             </>
         );
     }
+
 }
 
 export default Donate;

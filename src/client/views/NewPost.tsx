@@ -17,7 +17,7 @@ const NewPost: React.SFC<NewPostProps> = props => {
     useEffect(() => {
         if (!User || User.role !== 'admin') {
             props.history.replace('/login');
-        }
+        } 
     }, []);
 
     useEffect(() => {

@@ -14,8 +14,9 @@ import Contact from '../views/Contact';
 export interface IAppProps { }
 
 console.log(
-    "%cNOTE FROM DEVELOPER:\n\nWelcome, visitor! \nYou'll need login credentials for some features in this app like editing, deleting, and writing new blogs. \nWhen prompted to login, please use:\n- user: guest@myapp.com \n- password: guest \n(Feel free to test anything! I can always change it back.)\n \nTo test Donate page: \nFill out your name, dollar amount, and use \'424242\' repetitively for ALL card information inputs.",
-    "color: #0091ea; padding: 0.25em; font-size: 15px\n")
+    "%c NOTE FROM DEVELOPER: %cWelcome, visitor! \n\nYou'll need login credentials for some features in this app like editing, deleting, and writing new blogs. \n\nWhen prompted to login, please use:\n- user: guest@myapp.com \n- password: guest \n\n(Feel free to test anything! I can always change it back.)\n \nTo test Donate page: \nFill out your name, dollar amount, and use \'424242\' repetitively for ALL card information inputs.",
+    "background: #0091eb; color: white; font-size: 17px; padding: 2px",
+    "color: #0091eb; padding: 1px; font-size: 14px")
 
 class App extends React.Component<IAppProps> {
 

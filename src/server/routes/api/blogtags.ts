@@ -6,7 +6,6 @@ const router = Router();
 router.put('/:id', async (req, res) => {
     try {
         let exists: any = await db.blogtags.find(req.params.id);
-        console.log(exists)
         if(exists.length !== 0) {
             await db.blogtags.edit(req.params.id, req.body.tagid);
         } else {

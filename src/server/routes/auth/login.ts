@@ -1,6 +1,5 @@
 import * as express from 'express';
 import * as passport from 'passport';
-
 import { CreateToken } from '../../utils/security/tokens';
 
 const router = express.Router();
@@ -8,7 +7,6 @@ const router = express.Router();
 router.post('/', passport.authenticate('local'), async (req, res, next) => {
     try {
         let token = await CreateToken({ userid: req.user.id });
-        console.log(token)
         res.json({
             token,
             role: req.user.role,

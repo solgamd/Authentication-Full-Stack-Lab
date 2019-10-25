@@ -10,11 +10,12 @@ import Login from '../views/Login';
 import Admin from '../views/Admin';
 import Donate from '../views/Donate';
 import Contact from '../views/Contact';
+import Register from '../views/Register';
 
 export interface IAppProps { }
 
 console.log(
-    "%c NOTE FROM DEVELOPER: %cWelcome, visitor! \n\nYou'll need login credentials for some features in this app like editing, deleting, and writing new blogs. \n\nWhen prompted to login, please use:\n- user: guest@myapp.com \n- password: guest \n\n(Feel free to test anything! I can always change it back.)\n \nTo test Donate page: \nFill out your name, dollar amount, and use \'424242\' repetitively for ALL card information inputs.",
+    "%cWELCOME TO MY APP %cGreetings! You may notice some pages are blocked by authentication. If you want to test a form, try Donate or Contact. If you really want to have at it, email me and I'll get you login credentials! \n \nTo test Donate page: \n \nFill out your name, dollar amount, and use \'424242...\' repetitively for ALL card information inputs.",
     "background: #0091eb; color: white; font-size: 17px; padding: 2px",
     "color: #0091eb; padding: 1px; font-size: 14px")
 
@@ -34,6 +35,7 @@ class App extends React.Component<IAppProps> {
                         <Route exact path="/admin" component={Admin} />
                         <Route exact path="/donate" component={Donate} />
                         <Route exact path="/contact" component={Contact} />
+                        {/* <Route exact path="/register" component={Register} /> */}
                     </Switch>
                 </main>
             </BrowserRouter>

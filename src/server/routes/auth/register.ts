@@ -5,7 +5,7 @@ import { CreateToken } from '../../utils/security/tokens';
 
 const router = express.Router();
 
-router.post('/', async (req, res, next) => {
+router.post('/', async (req: any, res, next) => {
     try {
         let user = req.body;                            
         user.password = HashPassword(req.body.password); // User's password overridden with new hashed password

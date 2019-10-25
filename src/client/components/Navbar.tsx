@@ -34,6 +34,10 @@ const Navbar: React.FC<NavbarProps> = () => {
                     <NavLink exact to="/contact"
                         className="nav-item nav-link mx-2  text-secondary"
                         activeClassName="nav-item nav-link active text-alert">Contact</NavLink>
+
+                    {/* <NavLink exact to="/register"
+                        className="nav-item nav-link mx-2  text-secondary"
+                        activeClassName="nav-item nav-link active text-alert">Register</NavLink> */}
                 </div>
             </div>
         </nav>

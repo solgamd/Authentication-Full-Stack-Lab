@@ -35,7 +35,7 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
-router.post('/', isAdmin, async (req, res) => {
+router.post('/', async (req, res) => {
     let newBlog = {
         title: req.body.title,
         content: req.body.content
@@ -51,7 +51,7 @@ router.post('/', isAdmin, async (req, res) => {
 
 });
 
-router.delete('/:id', isAdmin, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         await db.blogtags.remove(req.params.id);
         await db.blogs.remove(req.params.id);
@@ -62,7 +62,7 @@ router.delete('/:id', isAdmin, async (req, res) => {
     }
 });
 
-router.put('/:id', isAdmin, async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         await db.blogs.edit(req.body, req.params.id);
         res.json('Blog edited successfully.');

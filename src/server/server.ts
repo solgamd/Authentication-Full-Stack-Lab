@@ -4,7 +4,7 @@ import * as path from 'path';
 import * as passport from 'passport';
 import './middleware/localstrategy';
 import './middleware/bearerstrategy';
-import { HashPassword } from './utils/security/password';
+// import { HashPassword } from './utils/security/password';
 import routes from './routes';
 
 const app = express();

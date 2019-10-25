@@ -1,10 +1,10 @@
-import * as knex from 'knex';
 // import * as mysql from 'mysql';
+import * as knex from 'knex';
 import config from '../config';
 
 export const knextion = knex(config.knex); 
 
-
+//CONVERTED FROM SQL TO KNEX
 // export const pool = mysql.createPool(config.knex.connection);
 
 // export const Query = (query: string, values?: any) => {

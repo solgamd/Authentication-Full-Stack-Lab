@@ -1,3 +1,4 @@
+
 $theme-colors: (
     'primary': #5A7D7C, 
     'secondary': #590004,
@@ -6,21 +7,46 @@ $theme-colors: (
     'alert': #FFFFFF
 );
 
+$sans-serif: 'Montserrat', sans-serif;
+
+$serif: 'Roboto Mono', monospace;
+
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
+
+
+
 body {
-    background-image: url("/images/topography.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: lightgrey;
-    background-blend-mode: overlay;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        attachment: fixed;
+        size: cover;
+        color: lightgrey;
+        blend-mode: overlay;
+        image: url("/images/topography.jpg");
+    }
 }
+
 .nav-link {
     justify-content: end
+}
+
+.card-img {
+    width: 100%;
+    height: 100%
 }
 
 .card-img-top {
     display: block;
 }
+
+.navbar-brand, .nav-item, .btn, h2, h4, h5 {
+    font-family: $sans-serif;
+}
+
+body {
+    font-family: $serif;
+}
+
+

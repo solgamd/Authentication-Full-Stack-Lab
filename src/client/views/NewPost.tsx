@@ -17,18 +17,7 @@ const NewPost: React.SFC<NewPostProps> = props => {
     useEffect(() => {
         if (!User || User.role !== 'admin') {
             props.history.replace('/login');
-        } 
-    }, []);
-
-    useEffect(() => {
-        (async () => {
-            try {
-                let tags = await json('/api/tags');
-                setTags(tags);
-            } catch (error) {
-                console.log(error);
-            }
-        })();
+        }
     }, []);
 
     var saving: boolean = false; 
@@ -58,6 +47,17 @@ const NewPost: React.SFC<NewPostProps> = props => {
             saving = false;
         }
     }
+
+    useEffect(() => {
+        (async () => {
+            try {
+                let tags = await json('/api/tags');
+                setTags(tags);
+            } catch (error) {
+                console.log(error);
+            }
+        })();
+    }, []);
 
     return (
         <section className="row justify-content-center">

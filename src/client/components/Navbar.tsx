@@ -20,19 +20,19 @@ const Navbar: React.FC<NavbarProps> = () => {
                         activeClassName="nav-item nav-link active text-alert">Blog Feed</NavLink>
 
                     <NavLink exact to="/admin"
-                        className="nav-item nav-link mx-2  text-secondary"
+                        className="nav-item nav-link mx-2 text-secondary"
                         activeClassName="nav-item nav-link active text-alert">Edit Blogs</NavLink>
 
                     <NavLink exact to="/new"
-                        className="nav-item nav-link mx-2  text-secondary"
+                        className="nav-item nav-link mx-2 text-secondary"
                         activeClassName="nav-item nav-link active text-alert">Write New Post</NavLink>
 
                     <NavLink exact to="/donate"
-                        className="nav-item nav-link mx-2  text-secondary"
+                        className="nav-item nav-link mx-2 text-secondary"
                         activeClassName="nav-item nav-link active text-alert">Donate</NavLink>
 
                     <NavLink exact to="/contact"
-                        className="nav-item nav-link mx-2  text-secondary"
+                        className="nav-item nav-link mx-2 text-secondary"
                         activeClassName="nav-item nav-link active text-alert">Contact</NavLink>
 
                     {/* <NavLink exact to="/register"

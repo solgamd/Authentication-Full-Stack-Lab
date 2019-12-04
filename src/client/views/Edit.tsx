@@ -4,7 +4,9 @@ import { ITag, IBlog } from '../utils/interfaces';
 import { RouteComponentProps } from 'react-router';
 import { json, User } from '../utils/api';
 
-export interface EditProps extends RouteComponentProps<{ id: string }> { }
+export interface EditProps extends RouteComponentProps<{ id: string }> {
+    
+ }
 
 const Edit: React.SFC<EditProps> = props => {
 
@@ -38,11 +40,8 @@ const Edit: React.SFC<EditProps> = props => {
     const handleEdit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         try {
-
             await json(`/api/blogs/${props.match.params.id}`, 'PUT', { title, content });
-
             await json(`/api/blogtags/${props.match.params.id}`, 'PUT', { tagid: selectedTag });
-
         } catch (error) {
             console.log(error);
         }

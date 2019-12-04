@@ -87,7 +87,7 @@ const NewPost: React.SFC<NewPostProps> = props => {
                     <textarea
                         value={content}
                         onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
-                        className="form-control"
+                        className="form-control" 
                         rows={8}
                     />
 

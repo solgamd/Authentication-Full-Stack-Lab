@@ -51,6 +51,7 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.8.6",
+    "react-markdown": "^4.2.2",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-stripe-elements": "^5.0.0",

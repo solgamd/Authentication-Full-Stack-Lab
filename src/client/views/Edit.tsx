@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { ITag, IBlog } from '../utils/interfaces';
 import { RouteComponentProps } from 'react-router';
 import { json, User } from '../utils/api';
+import Markdown from 'markdown-to-jsx'
+// import TinyMCE from '../components/TinyMCE';
 
 export interface EditProps extends RouteComponentProps<{ id: string }> {
     
@@ -48,7 +50,9 @@ const Edit: React.SFC<EditProps> = props => {
         props.history.push(`/${props.match.params.id}/details`);
     }
 
+
     return (
+
         <section className="row justify-content-center mt-5">
             <form className="col-md-6 form-group p-3 shadow">
                 <label>Blog Title</label>
@@ -71,13 +75,21 @@ const Edit: React.SFC<EditProps> = props => {
                 </select>
 
                 <label className="mt-4">Blog Content</label>
+                {/* <TinyMCE content={content} /> */}
+               
+               {/* <Markdown 
+               placeholder="Type markdown here" 
+               value={content}
+               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
+               className="form-control"
+               /> */}
                 <textarea
                     value={content}
                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
                     className="form-control"
                     rows={10}
                 />
-
+                
                 <button
                     onClick={handleEdit}
                     className="btn btn-primary btn-block mt-3 shadow-lg">Edit Post</button>

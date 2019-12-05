@@ -1,6 +1,5 @@
 import * as React from 'react';
 import '../scss/app.scss';
-import 'react-markdown';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from '../views/Home';

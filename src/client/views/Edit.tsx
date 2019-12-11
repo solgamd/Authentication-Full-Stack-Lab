@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import { ITag, IBlog } from '../utils/interfaces';
 import { RouteComponentProps } from 'react-router';
 import { json, User } from '../utils/api';
-import Markdown from 'markdown-to-jsx'
-// import TinyMCE from '../components/TinyMCE';
+import { Editor } from '@tinymce/tinymce-react';
+// import tinymce from 'tinymce/tinymce'
 
 export interface EditProps extends RouteComponentProps<{ id: string }> {
-    
- }
+
+}
 
 const Edit: React.SFC<EditProps> = props => {
 
@@ -17,6 +17,7 @@ const Edit: React.SFC<EditProps> = props => {
     const [selectedTag, setSelectedTag] = useState<string>('0');
     const [tags, setTags] = useState<ITag[]>([]);
     const [blog, setBlog] = useState<IBlog[]>([]);
+    const [newContent, setNewContent] = useState<string>('');
 
     useEffect(() => {
         if (!User || User.role !== 'admin') {
@@ -50,6 +51,14 @@ const Edit: React.SFC<EditProps> = props => {
         props.history.push(`/${props.match.params.id}/details`);
     }
 
+    const handleEditorChange = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        try {
+            setNewContent(newContent);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 
     return (
 
@@ -75,25 +84,38 @@ const Edit: React.SFC<EditProps> = props => {
                 </select>
 
                 <label className="mt-4">Blog Content</label>
-                {/* <TinyMCE content={content} /> */}
-               
-               {/* <Markdown 
-               placeholder="Type markdown here" 
-               value={content}
-               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
-               className="form-control"
-               /> */}
-                <textarea
+                {/* <textarea
+                    id="textarea"
                     value={content}
                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
                     className="form-control"
                     rows={10}
+                /> */}
+                <Editor
+                    id='textarea'
+                    apiKey='6zjx9k2kve59xrax5s11zbhzutae2s757qh81ow46whorwtr'
+                    initialValue="<p>This is the initial content of the editor</p>"
+                    value={content}
+                    init={{
+                        height: 500,
+                        menubar: false,
+                        plugins: [
+                            'advlist autolink lists link image charmap print preview anchor',
+                            'searchreplace visualblocks code fullscreen',
+                            'insertdatetime media table paste code help wordcount'
+                        ],
+                        toolbar:
+                            'undo redo | formatselect | bold italic backcolor | \
+                             alignleft aligncenter alignright alignjustify | \
+                             bullist numlist outdent indent | removeformat | help'
+                    }}
+                    onChange={handleEditorChange}
+                    // onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
                 />
-                
+
                 <button
                     onClick={handleEdit}
                     className="btn btn-primary btn-block mt-3 shadow-lg">Edit Post</button>
-
             </form>
         </section>
     );

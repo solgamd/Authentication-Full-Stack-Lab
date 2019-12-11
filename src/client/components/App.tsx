@@ -15,12 +15,12 @@ import Register from '../views/Register';
 export interface IAppProps { }
 
 console.log(
-    "%cWELCOME TO MY APP %cGreetings! You may notice some pages are blocked by authentication. I'm making updates to allow individual user registration, so stay tuned! If you want to test a form, try Contact or Donate. \n \nTo test Donate page: \n \nFill out your name, dollar amount, and use \'424242...\' repetitively for ALL card information inputs.",
+    "%cWELCOME TO MY APP %cGreetings! If you want to test a form, try Contact or Donate. \n \nTo test Donate page: \n \nFill out your name, dollar amount, and use \'424242...\' repetitively for ALL card information inputs.",
     "background: #0091eb; color: white; font-size: 17px; padding: 2px",
     "color: #0091eb; padding: 1px; font-size: 14px")
-
+ 
 class App extends React.Component<IAppProps> {
-
+       
     render() {
         return (
             <BrowserRouter>
@@ -35,7 +35,7 @@ class App extends React.Component<IAppProps> {
                         <Route exact path="/admin" component={Admin} />
                         <Route exact path="/donate" component={Donate} />
                         <Route exact path="/contact" component={Contact} />
-                        {/* <Route exact path="/register" component={Register} /> */}
+                        <Route exact path="/register" component={Register} />
                     </Switch>
                 </main>
             </BrowserRouter>
